@@ -4,6 +4,10 @@ import { View, Text, AsyncStorage } from 'react-native';
 import React, {useState, useEffect} from 'react'
 
 const LoginForm = () => {
+
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+
     const _storeUserData = async (_userData) => {
         try {
             await AsyncStorage.setItem(
