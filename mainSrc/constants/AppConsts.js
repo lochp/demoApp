@@ -7,6 +7,12 @@ export const AppConsts = {
         MAKE_APMT: 'MAKE APPOINTMENT',
         NOTIFICATION: 'NOTIFICATION',
         USER: 'USER'
+    },
+
+    NOTIFICATION_TYPE: {
+        ALL: 'ALL',
+        SYSTEM: 'SYSTEM',
+        PROMOTION: 'PROMOTION'
     }
 
 }
