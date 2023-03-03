@@ -27,7 +27,7 @@ const UserInfoPage = (props = {}) => {
     Utils.storeUserData(null);
   }
 
-  if (enterInfoDetail) return <UserDetails setEnterInfoDetail={setEnterInfoDetail} userData={userData} setUserData={setUserData} />
+  if (enterInfoDetail) return <UserDetails setEnterInfoDetail={setEnterInfoDetail} userData={userData} setUserData={setUserData} logoutFnc={logoutFnc} />
 
   return (
     <View style={styles.container}>
@@ -35,7 +35,7 @@ const UserInfoPage = (props = {}) => {
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}><Avatar.Text size={50} label={`${X1.charAt(0).toUpperCase()}${X2.charAt(0).toUpperCase()}`} /></View>
         <View style={{flex: 3}}>
           <Text style={styles.nameStyle}>{fullName}</Text>
-          <Text style={styles.ratingStyle}>Gold</Text>
+          <Text style={styles.ratingStyle}>Gold member</Text>
         </View>
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           <Pressable

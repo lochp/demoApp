@@ -7,6 +7,14 @@ export const Utils = {
         return false;
     },
 
+    toTitleCase:  phrase => {
+        return phrase
+          .toLowerCase()
+          .split(' ')
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ');
+    },
+
     storeUserData: async (_userData) => {
         try {
             console.log('save userdata', _userData);
