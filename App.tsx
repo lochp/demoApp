@@ -11,13 +11,13 @@
 import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
-  View, AsyncStorage
+  View
 } from 'react-native';
 import Content from './mainSrc/content/Content';
 import Footer from './mainSrc/footer/Footer';
 import LoginForm from './mainSrc/login/LoginForm';
 import { AppConsts } from './mainSrc/constants/AppConsts';
-import _ from 'lodash';
+// import _ from 'lodash';
 
 
 function App(): JSX.Element {
@@ -29,7 +29,7 @@ function App(): JSX.Element {
   <View style={styles.contaitner} >
     <View style={styles.content}>
       {
-        _.isEmpty(userData) ? <LoginForm setUserData={setUserData} /> : <Content userData={userData} tab={tab} />
+        userData == undefined ? <LoginForm setUserData={setUserData} /> : <Content userData={userData} tab={tab} setUserData={setUserData} />
       }
     </View>
     <View style={styles.footer}>
