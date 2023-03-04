@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const Utils = {
@@ -18,7 +19,7 @@ export const Utils = {
     storeUserData: async (_userData) => {
         try {
             console.log('save userdata', _userData);
-            if (isEmpty(_userData)){
+            if (Utils.isEmpty(_userData)){
                 await AsyncStorage.mergeItem(
                     'userData', ''
                 );

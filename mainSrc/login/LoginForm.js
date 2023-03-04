@@ -19,7 +19,7 @@ const LoginForm = (props = {}) => {
     const _storeUserData = async (_userData) => {
         try {
             console.log('save userdata', _userData);
-            if (isEmpty(_userData)){
+            if (Utils.isEmpty(_userData)){
                 await AsyncStorage.mergeItem(
                     'userData', ''
                 );
